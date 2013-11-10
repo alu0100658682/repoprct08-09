@@ -6,13 +6,15 @@ class Matrices
 	include Comparable
 	include Enumerable
 
+	attr_reader :filas, :columnas, :matriz
+
 	def initialize(m)
 		@filas = m.size
 		@columnas = m[1].size
 		@matriz = m
 	end
 	
-	attr_reader :filas, :columnas, :matriz
+
 
 
 #####Mostrar matriz
@@ -118,10 +120,29 @@ class Matrices
 
 	end
 
-
-
-
-
+####Matriz dispersa
+	def dispersa
+		ceros=0
+		dimension = @filas * @columnas
+		i=0		
+		while i < @filas
+			j=0
+			while j < @columnas
+				if ((self.matriz[i][j]) == 0)
+					ceros+=1					
+				end		
+				j+=1	
+			end
+			i+=1
+		end
+		disp = ((ceros * 100) / dimension)
+		if disp > 60
+			return true
+		else
+			return false
+		end
+		
+	end
 end
 
 

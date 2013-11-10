@@ -16,6 +16,11 @@ require "../lib/matriz.rb"
 
 	matrizo = Matrices.new([[2,4,6],[1,3,5],[2,7,8]])
 
+####
+	puts "####"
+	puts "#{matriz1.dispersa}"	
+	puts "####"
+####
 
 	puts "Matriz 1" 
 	
