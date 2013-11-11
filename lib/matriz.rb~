@@ -129,9 +129,9 @@ class Matrices
 			j=0
 			while j < @columnas
 				if ((self.matriz[i][j]) == 0)
-					ceros+=1	
-					j+=1
-				end			
+					ceros+=1					
+				end		
+				j+=1	
 			end
 			i+=1
 		end
